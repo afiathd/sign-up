@@ -1,0 +1,219 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('assets/fonts/Roboto-Bold.ttf');
+}
+
+body {
+  background-color: var(--Charcoal-Grey);
+  max-width: 1440px;
+  font-family: Roboto-regular;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#signup-ct {
+  display: flex;
+  margin-block: 80px;
+  background-color: white;
+  width: 60%;
+  border-radius: 25px;
+}
+
+.card {
+  /*! margin: 0; */
+  background-color: var(--White);
+  margin: 60px;
+}
+
+.card h1 {
+  margin-block: 25px;
+  font-family: Roboto-Bold;
+  margin-top: 50px;
+}
+
+.card h3 {
+  margin-block: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.pic {
+  margin: 20px;
+  background-image: url('assets/images/illustration-sign-up-desktop.svg');
+  width: 400px;
+  height: 593px;
+  border-radius: 20px;
+}
+
+
+.list {
+  margin-block: 50px;
+  list-style-image: url('assets/images/icon-list.svg');
+  list-style-position: inside;
+}
+
+.list-item {
+  margin-block: 20px;
+}
+
+#email {
+  margin-block: 5px;
+  padding: 15px;
+}
+
+.subscribe {
+  margin-block: 20px;
+  background-color: var(--Charcoal-Grey);
+  color: var(--White);
+  font-family: Roboto-Bold;
+}
+
+.subscribe:hover{
+  background: url(assets/images/illustration-sign-up-desktop.svg);
+  background-position: top center;
+  background-position-y: -15px;
+}
+
+.size {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: solid 1px var(--Grey);
+  cursor: pointer;
+}
+
+
+.attribution a{color: var(--White);text-decoration: none;}
+
+#inform{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+
+.alert-color{
+  color: var(--primary-Tomato);
+}
+
+.alert-bg{
+  background-color: #e3adad5e;
+  border-color: var(--primary-Tomato);
+}
+
+.success{
+  width: 500px;
+  display: flex;
+  margin-block: 15%;
+  background-color: white;
+  border-radius: 25px;
+  height: 500px;
+}
+
+.success h1{
+  color: var(--Dark-Slate-Grey)
+}
+
+.success .pic{
+  margin: 0px;
+  background: none;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+.success .pic svg{
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  #signup-ct {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-block: 0px;
+    border-radius: 0;
+    width: 100%;
+   
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  .pic {
+    margin: 0px;
+    background: url('assets/images/illustration-sign-up-mobile.svg') no-repeat center/cover;
+    width: 100%;
+    height: 295px;
+    border-radius: 0;
+  }
+
+  .card {
+    background-color: var(--White);
+    margin: 20px;
+  }
+
+  .card h1 {
+    margin-block: 30px;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .subscribe{
+    margin-bottom: 35px;
+  }
+
+  .success .pic{
+    margin-top: 35%;
+    background: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+  }
+  .success {
+    display: flex;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    margin-block: 0;
+    border-radius: 0;
+  }
+
+  .success .size {
+    width: 90%;
+    height: 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: solid 1px var(--Grey);
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    margin-inline: auto;
+  }
+}
